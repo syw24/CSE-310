@@ -1,23 +1,23 @@
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This is a simple hello world program. I create it with VS code, Python, and GitHub.  
 
-{Provide a description of your software}
+It will said Hello World! 
 
-{Describe your purpose for creating this software.}
+It's the firt code in Pythone. 
 
 {Provide a link to your YouTube demonstration.  It should be a one minute demo of the software running and a walkthrough of the code.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Hello World Video](https://youtu.be/65Jp4ZtTMfQ)
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+The software which build the Hello world is Visual Studio Code
 
-{Describe the programming language that you used}
+The program language is Python
 
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* [How to install VS code](https://www.youtube.com/watch?v=MlIzFUI1QGA)
+* [How to install Python](https://code.visualstudio.com/docs/languages/python)
