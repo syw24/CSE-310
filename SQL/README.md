@@ -1,36 +1,36 @@
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This is a SQL database of many different kinds of fruits. It is sorting by color, price, and types. 
 
-{Provide a description the software that you wrote and how it integrates with a SQL Relational Database. Describe how to use your program.}
+This software provided different types of fruit. You can use this software to know many different types of fruits.
 
-{Describe your purpose for writing this software.}
+The purpose of writing this code is to sorting the data. You can find the data you want really easily. 
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of how created the Relational Database.}
+Here is the link of how to use this software:
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://www.youtube.com/watch?v=Yd7nqrxJNhM)
 
 # Relational Database
 
-{Describe the relational database you are using.}
+The database is call fruits. 
 
-{Describe the structure (tables) of the relational database that you created.}
+It has two tables: fruits and fruit_type
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+This software is build by MySQL.
 
-{Describe the programming language that you used and any libraries.}
+I am using Structured Query Language which is SQL. This is simple software so it doesn't have any libraries included.  
 
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* [AS - W3school](https://www.w3schools.com/sql/sql_ref_as.asp)
+* [JOIN - W3school](https://www.w3schools.com/sql/sql_join.asp)
 
 # Future Work
 
 {Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+* Add more tables
+* Create more query 
+* Add more data to the database
