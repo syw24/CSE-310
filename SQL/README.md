@@ -12,7 +12,7 @@ Here is the link of how to use this software:
 
 # Relational Database
 
-The database is call fruits. 
+The database in MySQL is call fruits. 
 
 It has two tables: fruits and fruit_type
 
