@@ -31,6 +31,6 @@ I am using Structured Query Language which is SQL. This is simple software so it
 # Future Work
 
 {Make a list of things that you need to fix, improve, and add in the future.}
-* Add more table
+* Add more tables
 * Create more query 
-* Add more data to the database
+* Add more data to the database 
