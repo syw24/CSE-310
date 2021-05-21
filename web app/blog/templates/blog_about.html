@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {background-color: rgb(243, 203, 209);
+              font-size: 20px;
+                }
+        h1 {text-align: center;
+            font-size: 50px;
+            }
+        article {text-align: center;}
+
+        .bg-steel {
+            background-color: rgb(240, 130, 146);
+            text-align: center;
+        }
+        
+    </style>
+    <title>Welcom to converter</title>
+
+
+</head>
+<body>
+    <header>
+        <div class="bg-steel">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+        </div>
+        
+        <h1>Converter</h1>
+    </header>
+    <hr>
+    <main>
+        <article>
+            <h2>Celsius to Fahrenheit</h2>
+            <div>
+                <label for="c">Celsius:</label>
+                <input type="text" id="c" name="c"><br><br>
+            </div>
+            
+            <div>
+                <input type="button" id="transfer_cf" value="convert"><br><br>
+            </div>
+            
+            <div>
+                <label for="f">Fahrenheit:</label>
+                <input type="text" id="f" name="f" disabled><br><br>
+            </div>
+        </article>
+
+        <article>
+            <h2>US fluid ounce to Milliliter</h2>
+            <div>
+                <label for="oz">US fluid ounce:</label>
+                <input type="text" id="oz" name="oz"><br><br>
+            </div>
+
+            <div>
+                <input type="button" id="transfer_oz_ml" value="convert"><br><br>
+            </div>
+            <div>
+                <label for="transfer">Milliliter:</label>
+                <input type="text" id="transfer" name="transfer" disabled><br><br>
+            </div>
+        </article>
+        
+</body>
+</html>
+
+<script>
+    // convert the c to f
+    function cf(number) {
+        return (number * 9 / 5) + 32;
+    }
+    
+    function transfer_cf() {
+        let c = parseInt(document.querySelector('#c').value);
+        let result = cf(c);
+        document.querySelector('#f').value = result;
+    }
+    
+    document.querySelector('#transfer_cf').addEventListener('click', transfer_cf);
+    
+    // convert the oz to ml
+    const oz_ml = function (number) {
+        num = number * 29.574;
+        n = num.toFixed(2);
+        return n;
+    }
+    
+    const transfer_oz_ml = function() {
+        let ml = parseInt(document.querySelector('#oz').value);
+        let result = oz_ml(ml);
+        document.querySelector('#transfer').value = result;
+    }
+    
+    document.querySelector('#transfer_oz_ml').addEventListener('click', transfer_oz_ml);
+</script>

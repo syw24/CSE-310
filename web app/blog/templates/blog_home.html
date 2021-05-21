@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body {
+            background-color: rgb(243, 203, 209);
+            text-align: center;
+        }
+
+        .bg-steel {
+            background-color: rgb(240, 130, 146);
+        }
+
+        .content-section {
+            background: #ffebeb;
+            padding: 10px 20px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+        
+
+    </style>
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Sami's Blog</title>
+    {% endif %}
+</head>
+
+<body>
+    <header>
+        <div class="bg-steel">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+        </div>
+    </header>
+
+    <h1>Welcome to my blog!</h1>
+    <hr>
+    <form action="/action_page.php">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br><br>
+    <form action="/action_page.php">
+        <label for="recipe">Recipe:</label><br>
+        <textarea id="recipe" name="recipe" rows="10" cols="50">
+          Enter the recipe here.
+        </textarea>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+
+    <div class="row">
+        {% for post in posts %}
+            <h1>{{ post.title }}</h1>
+            <p>ingredients: {{ post.ingredients }}</p>
+            <p>recipe: {{ post.recipe }}</p>
+            <p>{{ post.date_post|date:'F d, Y' }}</p>
+            <hr>
+        {% endfor %} 
+    </div>
+
+</body>
+</html>

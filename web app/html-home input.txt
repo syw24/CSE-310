@@ -1,0 +1,18 @@
+ <h1>Welcome to my blog!</h1>
+    <hr>
+    <form action="/action_page.php">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br><br>
+    <form action="/action_page.php">
+        <label for="recipe">Recipe:</label><br>
+        <textarea id="recipe" name="recipe" rows="10" cols="50">
+          Enter the recipe here.
+        </textarea>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>Title: <span id="title"></span></p>
