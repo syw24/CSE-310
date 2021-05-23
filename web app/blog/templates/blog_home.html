@@ -37,13 +37,24 @@
     <header>
         <div class="bg-steel">
             <a href="/">Home</a>
-            <a href="/about">About</a>
+            <a href="/con">converter</a>
         </div>
     </header>
+    <hr>
 
     <h1>Welcome to my blog!</h1>
+    <!-- 
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    -->
     <hr>
-    <form action="/action_page.php">
+    <!--
+    <form>
         <label for="title">Title:</label><br>
         <input type="text" id="title" name="title"><br><br>
         <input type="submit" value="Submit">
@@ -58,13 +69,14 @@
         <input type="submit" value="Submit">
     </form>
     <hr>
-
+    -->
     <div class="row">
         {% for post in posts %}
             <h1>{{ post.title }}</h1>
             <p>ingredients: {{ post.ingredients }}</p>
             <p>recipe: {{ post.recipe }}</p>
             <p>{{ post.date_post|date:'F d, Y' }}</p>
+            <p>{{ post.user }}</p>
             <hr>
         {% endfor %} 
     </div>
