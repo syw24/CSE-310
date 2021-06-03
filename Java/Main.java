@@ -10,6 +10,7 @@ public class Main {
     public void sayHelloFromMe() {
       System.out.println("Hello from " + yourName);
     }
+    
     public void sayHello() {
       System.out.println("Hello from sayHello");
     }
