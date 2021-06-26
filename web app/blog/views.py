@@ -15,3 +15,5 @@ def home(request):
 def about(request):
     return render(request, 'blog_about.html')
 
+
+

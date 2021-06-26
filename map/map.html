@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Map</title>
+    <style>
+        html,
+        body,
+        #viewDiv {
+          padding: 0;
+          margin: 0;
+          height: 100%;
+          width: 100%;
+        }
+      </style>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.19/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.19/"></script>
+
+    <script>
+               
+      require(["esri/Map", "esri/views/MapView",
+          "esri/Graphic", "esri/layers/GraphicsLayer"
+      ], function (Map, MapView, Graphic, GraphicsLayer) {        
+          const location = [
+            {
+                // 1
+                "longitude": 120.3941605,
+                "latitude": 22.658319171419212,
+                "title": "Koahsiung City",
+                "content": "RenMei Elemantry school - 仁美國小"
+            },
+            {
+                // 2
+                "longitude": 120.38346810825693,
+                "latitude": 22.664166095146154,
+                "title": "Koahsiung City",
+                "content": "Enzhao Temple - 圓照寺"
+            },
+            {
+                // 3
+                "longitude": 120.35340903894708,
+                "latitude": 22.621063119746278,
+                "title": "Koahsiung City",
+                "content": "Fongsi Junior High School - 鳳西國中"
+
+            },
+            {
+                // 4
+                "longitude": 120.39298730127494,
+                "latitude": 22.60008512256659,
+                "title": "Koahsiung City",
+                "content": "Chung Shan Industrial & Commercial School - 中山工商"
+            },
+            {
+                // 5
+                "longitude": 120.2646548290952,
+                "latitude": 22.629554207423137,
+                "title": "Koahsiung City",
+                "content": "National Sun Yat-sen University - 中山大學"
+            },
+            {
+                // 6
+                "longitude": 120.26687174017343,
+                "latitude": 22.610536090185356,
+                "title": "Koahsiung City",
+                "content": "Cijin Beach - 旗津海水浴場"
+            },
+            {
+                // 7
+                "longitude": 120.30037936963795,
+                "latitude": 22.61122086059471,
+                "title": "Koahsiung City",
+                "content": "85 Sky-tower CTtraveller Suit - 85大樓"
+            },
+            {
+                // 8
+                "longitude": 120.29845801705022,
+                "latitude": 22.61723730945276,
+                "title": "Koahsiung City",
+                "content": "Ziqiang Night Market - 自強夜市"
+            },
+            {
+                // 9
+                "longitude": 120.30188517357429,
+                "latitude": 22.62373292531814,
+                "title": "Koahsiung City",
+                "content": "Shinkuchan Shopping District - 新堀江商圈"
+            },
+            {
+                // 10
+                "longitude": 120.29982154505016,
+                "latitude": 22.66691017310367,
+                "title": "Koahsiung City",
+                "content": "Rueifong Night Market - 瑞豐夜市"
+            },
+            {
+                // 11
+                "longitude": 120.31547252049944,
+                "latitude": 22.665362795875765,
+                "title": "Koahsiung City",
+                "content": "Earth swimming pool - 大地游泳池"
+            },
+            {
+                // 12
+                "longitude": 121.31695926530969,
+                "latitude": 23.33464742366318,
+                "title": "Hualien County",
+                "content": "Yuli Qiaotou Stinky Tofu - 玉里橋頭臭豆腐"
+            },
+            {
+                // 13
+                "longitude": 120.31379952972624,
+                "latitude": 22.75539589530264, 
+                "title": "Koahsiung City",
+                "content": "Taiwan Sugar Museum - 橋頭糖廠"
+            },
+            {
+                // 14
+                "longitude": 121.34253356853735,
+                "latitude": 23.28066373510269, 
+                "title": "Hualien County",
+                "content": "Antong Creekside Hot Spring - 安通溫泉民宿"
+            },
+            {
+                // 15
+                "longitude": 121.49083478688192,
+                "latitude": 24.1941854507708, 
+                "title": "Hualien County",
+                "content": "Taroko National Park - 太魯閣國家公園"
+            },
+            {
+                // 16
+                "longitude": 121.56078174739314,
+                "latitude": 25.19778116312494, 
+                "title": "Taipei City",
+                "content": "Yangmingshan National Park - 陽明山國家公園"
+            },
+            {
+                // 17
+                "longitude": 121.84516123900318,
+                "latitude": 25.11000549267714, 
+                "title": "New Taipei City",
+                "content": "Jiufen Old Street - 九份老街"
+            },
+            {
+                // 18
+                "longitude": 121.85451951699531,
+                "latitude": 25.100946651354842, 
+                "title": "New Taipei City",
+                "content": "Jinguashi Geopark - 金瓜石地質公園"
+            },
+            {
+                // 19
+                "longitude": 121.50728186418992,
+                "latitude": 23.952033606010033, 
+                "title": "Hualien County",
+                "content": "Mu Gu Mu Yu - 慕谷慕魚"
+            },
+            {
+                // 20
+                "longitude": 121.50990323590044,
+                "latitude": 23.92870306221973, 
+                "title": "Hualien County",
+                "content": "Liyu Lake - 鯉魚潭"
+            }
+        ]
+
+
+
+          const map = new Map({
+              basemap: "topo-vector" // Basemap layer service
+          });
+
+          const view = new MapView({
+              map: map,
+              center: [121.1869271029372, 23.484154700120097], // Longitude, latitude
+              zoom: 7.5, // Zoom level
+              container: "viewDiv" // Div element
+          });
+
+            // Create and add a GraphicsLayer to store graphics
+            const graphicsLayer = new GraphicsLayer();
+                  map.add(graphicsLayer);
+
+            // start the for loop here
+            for (let loc in location) {
+                const point = { //Create a point for Kaohsiung temple
+                    type: "point",
+                    longitude: location[loc].longitude, // from list
+                    latitude: location[loc].latitude    // from list
+                };
+
+                const simpleMarkerSymbol = {
+                    type: "picture-marker",
+
+                    url:"marker.png",
+
+                    //img.src = "marker.png";
+
+                    //color: [225, 0, 0], 
+                    //outline: {
+                    //    color: [255, 255, 255], 
+                    //    width: 1
+                    //}
+                };
+
+                // Display the point
+                const pointGraphic = new Graphic({
+                    geometry: point, 
+                    symbol: simpleMarkerSymbol
+                });
+
+                // Create the popup 
+                pointGraphic.popupTemplate = {
+                    "title": location[loc].title,       // from list
+                    "content": location[loc].content    // from list
+                }
+                
+                // Show the point
+                graphicsLayer.add(pointGraphic);
+            }
+
+
+
+          });
+
+    </script>
+    </head>
+
+    <body>
+      <div id="viewDiv"></div>
+    </body>
+
+</html>
