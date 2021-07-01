@@ -16,7 +16,7 @@ I use javascript and the ArGIS mapping to build this project.
 # Useful Websites
 
 * [W3School](https://www.w3schools.com/js/js_loop_forin.asp)
-* [ArGIS marker symbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleMarkerSymbol.html)  
+* [ArGIS marker symbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleMarkerSymbol.html)   
 
 # Future Work
 
